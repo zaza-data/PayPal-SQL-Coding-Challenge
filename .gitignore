@@ -1,0 +1,6 @@
+# CSV files
+data_csv/
+*.csv
+
+# DOCX files
+Compte rendu.docx

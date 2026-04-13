@@ -1,0 +1,360 @@
+1. Data Integrity Checking & Cleanup
+
+Alphabetically list all of the country codes in the continent_map table that appear more than once. Display any values where country_code is null as country_code = "FOO" and make this row appear first in the list, even though it should alphabetically sort to the middle. Provide the results of this query as your answer.
+
+Result :
+ 
+#	country_code
+1	FOO
+2	ARM
+3	AZE
+4	CYP
+5	GEO
+6	KAZ
+7	RUS
+8	TUR
+9	UMI
+
+For all countries that have multiple rows in the continent_map table, delete all multiple records leaving only the 1 record per country. The record that you keep should be the first one when sorted by the continent_code alphabetically ascending. Provide the query/ies and explanation of step(s) that you follow to delete these records.
+
+Result :
+
+#	country_code	continent_code
+1	ABW	NA
+2	AFG	AS
+3	AGO	AF
+4	AIA	NA
+5	ALA	EU
+6	ALB	EU
+7	AND	EU
+8	ANT	NA
+9	ARE	AS
+10	ARG	SA
+11	ARM	AF
+12	ASM	OC
+13	ATA	AN
+14	ATF	AN
+15	ATG	NA
+16	AUS	OC
+17	AUT	EU
+18	AZE	AS
+19	BDI	AF
+20	BEL	EU
+21	BEN	AF
+22	BES	NA
+23	BFA	AF
+24	BGD	AS
+25	BGR	EU
+26	BHR	AS
+27	BHS	NA
+28	BIH	EU
+29	BLM	NA
+30	BLR	EU
+31	BLZ	NA
+32	BMU	NA
+33	BOL	SA
+34	BRA	SA
+35	BRB	NA
+36	BRN	AS
+37	BTN	AS
+38	BVT	AN
+39	BWA	AF
+40	CAF	AF
+41	CAN	NA
+42	CCK	AS
+43	CHE	EU
+44	CHL	SA
+45	CHN	AS
+46	CIV	AF
+47	CMR	AF
+48	COD	AF
+49	COG	AF
+50	COK	OC
+51	COL	SA
+52	COM	AF
+53	CPV	AF
+54	CRI	NA
+55	CUB	NA
+56	CUW	NA
+57	CXR	AS
+58	CYM	NA
+59	CYP	AS
+60	CZE	EU
+61	DEU	EU
+62	DJI	AF
+63	DMA	NA
+64	DNK	EU
+65	DOM	NA
+66	DZA	AF
+67	ECU	SA
+68	EGY	AF
+69	ERI	AF
+70	ESH	AF
+71	ESP	EU
+72	EST	EU
+73	ETH	AF
+74	FIN	EU
+75	FJI	OC
+76	FLK	SA
+77	FRA	EU
+78	FRO	EU
+79	FSM	OC
+80	GAB	AF
+81	GBR	EU
+82	GEO	AS
+83	GGY	EU
+84	GHA	AF
+85	GIB	EU
+86	GIN	AF
+87	GLP	NA
+88	GMB	AF
+89	GNB	AF
+90	GNQ	AF
+91	GRC	EU
+92	GRD	NA
+93	GRL	NA
+94	GTM	NA
+95	GUF	SA
+96	GUM	OC
+97	GUY	SA
+98	HKG	AS
+99	HMD	AN
+100	HND	NA
+101	HRV	EU
+102	HTI	NA
+103	HUN	EU
+104	IDN	AS
+105	IMN	EU
+106	IND	AS
+107	IOT	AS
+108	IRL	EU
+109	IRN	AS
+110	IRQ	AS
+111	ISL	EU
+112	ISR	AS
+113	ITA	EU
+114	JAM	NA
+115	JEY	EU
+116	JOR	AS
+117	JPN	AS
+118	KAZ	AS
+119	KEN	AF
+120	KGZ	AS
+121	KHM	AS
+122	KIR	OC
+123	KNA	NA
+124	KOR	AS
+125	KWT	AS
+126	LAO	AS
+127	LBN	AS
+128	LBR	AF
+129	LBY	AF
+130	LCA	NA
+131	LIE	EU
+132	LKA	AS
+133	LSO	AF
+134	LTU	EU
+135	LUX	EU
+136	LVA	EU
+137	MAC	AS
+138	MAF	NA
+139	MAR	AF
+140	MCO	EU
+141	MDA	EU
+142	MDG	AF
+143	MDV	AS
+144	MEX	NA
+145	MHL	OC
+146	MKD	EU
+147	MLI	AF
+148	MLT	EU
+149	MMR	AS
+150	MNE	EU
+151	MNG	AS
+152	MNP	OC
+153	MOZ	AF
+154	MRT	AF
+155	MSR	NA
+156	MTQ	NA
+157	MUS	AF
+158	MWI	AF
+159	MYS	AS
+160	MYT	AF
+161	NAM	AF
+162	NCL	OC
+163	NER	AF
+164	NFK	OC
+165	NGA	AF
+166	NIC	NA
+167	NIU	OC
+168	NLD	EU
+169	NOR	EU
+170	NPL	AS
+171	NRU	OC
+172		AS
+173	NZL	OC
+174	OMN	AS
+175	PAK	AS
+176	PAN	NA
+177	PCN	OC
+178	PER	SA
+179	PHL	AS
+180	PLW	OC
+181	PNG	OC
+182	POL	EU
+183	PRI	NA
+184	PRK	AS
+185	PRT	EU
+186	PRY	SA
+187	PSE	AS
+188	PYF	OC
+189	QAT	AS
+190	REU	AF
+191	ROU	EU
+192	RUS	AS
+193	RWA	AF
+194	SAU	AS
+195	SDN	AF
+196	SEN	AF
+197	SGP	AS
+198	SGS	AN
+199	SHN	AF
+200	SJM	EU 
+
+2. List the countries ranked 10-12 in each continent by the percent of year-over-year growth descending from 2011 to 2012.
+
+The percent of growth should be calculated as: ((2012 gdp - 2011 gdp) / 2011 gdp)
+
+The list should include the columns:
+
+rank
+continent_name
+country_code
+country_name
+growth_percent
+
+Result :
+
+#	rank	continent_name	country_code	country_name	concat
+1	10	South America	ARG	Argentina	5.67%
+2	11	South America	PRY	Paraguay	-3.62%
+3	12	South America	BRA	Brazil	-9.83%
+4	10	Oceania	FJI	Fiji	3.29%
+5	11	Oceania	TUV	Tuvalu	1.27%
+6	12	Oceania	KIR	Kiribati	0.04%
+7	10	North America	DOM	Dominican Republic	4.61%
+8	11	North America	USA	United States	3.80%
+9	12	North America	VCT	St. Vincent and the Grenadines	3.56%
+10	10	Europe	LVA	Latvia	0.86%
+11	11	Europe	NOR	Norway	0.47%
+12	12	Europe	LTU	Lithuania	0.10%
+13	10	Asia	CHN	China	11.82%
+14	11	Asia	TLS	Timor-Leste	11.34%
+15	12	Asia	UZB	Uzbekistan	11.12%
+16	10	Africa	LBR	Liberia	9.77%
+17	11	Africa	EGY	Egypt, Arab Rep.	9.53%
+18	12	Africa	RWA	Rwanda	8.73%
+
+
+3. For the year 2012, create a 3 column, 1 row report showing the percent share of gdp_per_capita for the following regions:
+
+(i) Asia, (ii) Europe, (iii) the Rest of the World. Your result should look something like
+
+Asia	Europe	Rest of World
+25.0%	25.0%	50.0%
+
+Result :
+
+#	asia	europe	rest_of_world
+1	28.33%	42.24%	29.43%
+
+4a. What is the count of countries and sum of their related gdp_per_capita values for the year 2007 where the string 'an' (case insensitive) appears anywhere in the country name?
+
+Result :
+
+#	count_countries	sum_gdp_per_capita
+1	68	$1022936.33
+
+4b. Repeat question 4a, but this time make the query case sensitive.
+
+Result :
+
+#	count_countries	sum_gdp_per_capita
+1	66	$979600.72
+
+5. Find the sum of gpd_per_capita by year and the count of countries for each year that have non-null gdp_per_capita where (i) the year is before 2012 and (ii) the country has a null gdp_per_capita in 2012. Your result should have the columns:
+
+year
+country_count
+total
+
+Result :
+
+#	year	counrty_count	total
+1	2 004	15	$491203.19
+2	2 005	15	$510734.98
+3	2 006	14	$553689.64
+4	2 007	14	$654508.77
+5	2 008	10	$574016.21
+6	2 009	9	$473103.33
+7	2 010	4	$179750.83
+8	2 011	4	$199152.68
+
+
+6. All in a single query, execute all of the steps below and provide the results as your final answer:
+
+a. create a single list of all per_capita records for year 2009 that includes columns:
+
+continent_name
+country_code
+country_name
+gdp_per_capita
+
+b. order this list by:
+
+continent_name ascending
+characters 2 through 4 (inclusive) of the country_name descending
+
+c. create a running total of gdp_per_capita by continent_name
+
+d. return only the first record from the ordered list for which each continent's running total of gdp_per_capita meets or exceeds $70,000.00 with the following columns:
+
+continent_name
+country_code
+country_name
+gdp_per_capita
+running_total
+
+Result :
+
+#	continent_name	country_code	country_name	gdp_per_capita	running_total
+1	Africa	LBY	Libya	$10455.57	$70227.16
+2	Asia	KWT	Kuwait	$37160.54	$73591.81
+3	Europe	CHE	Switzerland	$65790.07	$84673.58
+4	North America	ABW	Aruba	$24639.94	$84504.67
+5	Oceania	NZL	New Zealand	$27474.33	$84623.92
+6	South America	ECU	Ecuador	$4236.78	$72315.82
+
+
+7. Find the country with the highest average gdp_per_capita for each continent for all years. Now compare your list to the following data set. Please describe any and all mistakes that you can find with the data set below. Include any code that you use to help detect these mistakes.
+
+rank	continent_name	country_code	country_name	avg_gdp_per_capita
+1	Africa	SYC	Seychelles	$11,348.66
+1	Asia	KWT	Kuwait	$43,192.49
+1	Europe	MCO	Monaco	$152,936.10
+1	North America	BMU	Bermuda	$83,788.48
+1	Oceania	AUS	Australia	$47,070.39
+1	South America	CHL	Chile	$10,781.71
+
+
+Result :
+
+#	rank	continent_name	country_code	country_name	avg_gdp_per_capita
+1	1	Africa	GNQ	Equatorial Guinea	$17955.72
+2	1	Asia	QAT	Qatar	$70567.96
+3	1	Europe	MCO	Monaco	$151421.89
+4	1	North America	BMU	Bermuda	$84634.83
+5	1	Oceania	AUS	Australia	$46147.45
+6	1	South America	CHL	Chile	$10781.71
+
+

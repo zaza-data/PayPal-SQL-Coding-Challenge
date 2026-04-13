@@ -44,7 +44,7 @@ ranking.rank,
 ct.continent_name,
 ranking.country_code,
 cn.country_name,
-concat(round(ranking.growth_percent*100,2), '%') --concat(ranking.growth_percent*100, '%') as growth_percent
+concat(round(ranking.growth_percent*100,2), '%') 
 from
 (select 
 gdp_2012.continent_code,
